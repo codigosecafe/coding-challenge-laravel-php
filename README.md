@@ -22,6 +22,6 @@ O teste é simples e direto, portanto apresente o que você julga ser um código
 
 Sinta-se à vontade para abrir uma `issue` no repositório para qualquer problema ou solicitação de recurso. Para obter detalhes de como enviar sua solicitação, verifique o arquivo [CONTRIBUTING][contributing].
 
-Se entretanto for algo que requer minha atenção iminente, sinta-se à vontade para nos contatar [codigosecafe+github@gmail.com](codigosecafe+github@gmail.com).
+Se entretanto for algo que requer minha atenção iminente, sinta-se à vontade para entrar em contato [codigosecafe+github@gmail.com](codigosecafe+github@gmail.com).
 
 [contributing]:CONTRIBUTING.md
