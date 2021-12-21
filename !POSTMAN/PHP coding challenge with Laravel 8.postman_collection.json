@@ -1,0 +1,393 @@
+{
+	"info": {
+		"_postman_id": "c9f5c43b-423d-420d-8d04-1a195dcf3faa",
+		"name": "PHP coding challenge with Laravel 8",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movimento",
+			"item": [
+				{
+					"name": "Cadastra um novo movimento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Corrida Maluca\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_artisan}}/movement",
+							"host": [
+								"{{url_artisan}}"
+							],
+							"path": [
+								"movement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista os movimentos cadastrados Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_artisan}}/movement",
+							"host": [
+								"{{url_artisan}}"
+							],
+							"path": [
+								"movement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza um movimento cadastrado",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_artisan}}/movement/6",
+							"host": [
+								"{{url_artisan}}"
+							],
+							"path": [
+								"movement",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza um movimento cadastrado Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Corrida 0001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_artisan}}/movement/4",
+							"host": [
+								"{{url_artisan}}"
+							],
+							"path": [
+								"movement",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalhe do movimento",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Corrida 0001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_artisan}}/movement/4",
+							"host": [
+								"{{url_artisan}}"
+							],
+							"path": [
+								"movement",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Cadastra um novo usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Claudio\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_artisan}}/user",
+							"host": [
+								"{{url_artisan}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista os usuarios cadastrados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_artisan}}/user",
+							"host": [
+								"{{url_artisan}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_artisan}}/user/4",
+							"host": [
+								"{{url_artisan}}"
+							],
+							"path": [
+								"user",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualiza usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Claudio Alexssandro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_artisan}}/user/4",
+							"host": [
+								"{{url_artisan}}"
+							],
+							"path": [
+								"user",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalhe do usuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Corrida 0001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_artisan}}/user/3",
+							"host": [
+								"{{url_artisan}}"
+							],
+							"path": [
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Registros Pessoais",
+			"item": [
+				{
+					"name": "Cadastra um novo registro",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\" : 3,\n    \"movement_id\": 1,\n    \"score\": 250.3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_artisan}}/personal-record",
+							"host": [
+								"{{url_artisan}}"
+							],
+							"path": [
+								"personal-record"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lista os registros cadastrados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url_artisan}}/personal-record",
+							"host": [
+								"{{url_artisan}}"
+							],
+							"path": [
+								"personal-record"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url_artisan}}/personal-record/19",
+							"host": [
+								"{{url_artisan}}"
+							],
+							"path": [
+								"personal-record",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalhe do registro",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Corrida 0001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url_artisan}}/personal-record/3",
+							"host": [
+								"{{url_artisan}}"
+							],
+							"path": [
+								"personal-record",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EXIBE TODOS OS RANKS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_artisan}}/rank-movement",
+					"host": [
+						"{{url_artisan}}"
+					],
+					"path": [
+						"rank-movement"
+					],
+					"query": [
+						{
+							"key": "searchTerm",
+							"value": "DE",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EXIBE RANK POR MOVIMENTO Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_artisan}}/rank-movement/BACK SQUAT",
+					"host": [
+						"{{url_artisan}}"
+					],
+					"path": [
+						"rank-movement",
+						"BACK SQUAT"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
