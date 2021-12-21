@@ -150,7 +150,7 @@ Para garantir o funcionamento da nossa aplicação o desenvolvimento dela foi ba
 
 <img src="./docs/image/route-list.png?raw=true"  />
 
-Para garantir o funcionamento dos testes vamos dar as permições de leitura, escrita e execução (777), em nosso arquivo **sqlite** que usaremos para a armazenar os dados de teste.
+Mas antes vamos dar as permições de leitura, escrita e execução (777), em nosso arquivo **sqlite** que usaremos para a armazenar os dados de teste, lembrando que 777 só em ambiente controlado.
 ```sh
 chmod 777 -R database/databasetest.sqlite
 ```
