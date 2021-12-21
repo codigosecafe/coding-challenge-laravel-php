@@ -15,16 +15,18 @@
 ## Descrição do desafio<span id="descrição-do-desafio"></span>
 Olá esse projeto tem a intenção de mostrar a minha capacidade em trazer uma solução para um desafio proposto.
 
-Recebi como desafio o seguite cenário:
+Recebi como desafio o seguinte cenário:
 
-Construir um endpoint REST (de preferência em PHP) que retorne o ranking de um determinado Movemento, trazendo o nome do Movemento e uma lista ordenada com os usuários, seu espectivo recorde pessoal (maior valor), posição e data.
+Construir um endpoint REST (de preferência em PHP) que retorne o ranking de um determinado Movimento, trazendo o nome do Movimento e uma lista ordenada com os usuários, seu respectivo recorde pessoal (maior valor), posição e data.
 
 Considerações:
  - Usuários com o mesmo valor de recorde pessoal devem ocupar a mesma posição no ranking.
  - Você pode utilizar um framework ou não.
  - Deve acompanhar as instruções de como rodar o código.
  - O código tem que estar postado em algum repositório Git.
+
 O teste é simples e direto, portanto apresente o que você julga ser um código pronto para produção, seguindo suas melhores práticas de desenvolvimento.
+
 ---
 ## Instalação<span id="installation"></span>
 
@@ -32,7 +34,7 @@ Para esse teste de conhecimento preparei dois modos de testar a solução criada
 
 ---
 ### Requisitos do sistema<span id="installation-requisitos"></span>
-Enquanto estiver trabalhando e/ou desenvolvendo qualquer aplicação na versão laravel 8. Devemos ter corresponder algumas necessidade do PHP e da configuração do sistema.
+Enquanto estiver trabalhando e/ou desenvolvendo qualquer aplicação na versão laravel 8. Devemos ter de corresponder algumas necessidades do PHP e da configuração do sistema.
 
 Antes de ir para a Instalação do Laravel 8, temos que nos certificar das seguintes configurações.
 
@@ -66,7 +68,7 @@ Agora vamos copiar o arquivo **.env.example** eu deixei esse arquivo com as conf
 ```sh
 cp .env.example .env
 ```
-Por segurança mantive a chave **APP_KEY** ser valor definido, mas para gerar a chave basta rodar o seguinte comando.
+Por segurança mantive a chave **APP_KEY** sem valor definido, mas para gerar a chave basta rodar o seguinte comando.
 ```sh
 php artisan key:generate
 ```
@@ -120,7 +122,7 @@ Para darmos continuidade vamos acessar o conteiner do nosso projeto.
 ```sh
 docker-compose exec coding_challenge_laravel_php bash
 ```
-Por segurança mantive a chave **APP_KEY** ser valor definido, mas para gerar a chave basta rodar o seguinte comando.
+Por segurança mantive a chave **APP_KEY** sem valor definido, mas para gerar a chave basta rodar o seguinte comando.
 ```sh
 php artisan key:generate
 ```
