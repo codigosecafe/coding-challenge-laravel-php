@@ -10,13 +10,13 @@ use Carbon\Carbon;
 
 /**
  * Class PersonalRecord
- * 
+ *
  * @property int $id
  * @property int $user_id
  * @property int $movement_id
  * @property float $value
  * @property Carbon $date
- * 
+ *
  * @property User $user
  * @property Movement $movement
  *
@@ -29,7 +29,6 @@ class PersonalRecord extends Entity
 	const MOVEMENT_ID = 'movement_id';
 	const VALUE = 'value';
 	const DATE = 'date';
-	protected $connection = 'mysql';
 	protected $table = 'personal_record';
 	public $timestamps = false;
 

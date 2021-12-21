@@ -10,7 +10,7 @@ use Carbon\Carbon;
 
 /**
  * Class FailedJob
- * 
+ *
  * @property int $id
  * @property string $uuid
  * @property string $connection
@@ -30,7 +30,6 @@ class FailedJob extends Entity
 	const PAYLOAD = 'payload';
 	const EXCEPTION = 'exception';
 	const FAILED_AT = 'failed_at';
-	protected $connection = 'mysql';
 	protected $table = 'failed_jobs';
 	public $timestamps = false;
 

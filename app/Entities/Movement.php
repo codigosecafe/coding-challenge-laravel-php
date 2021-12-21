@@ -24,7 +24,6 @@ class Movement extends Entity
 	const ID = 'id';
 	const NAME = 'name';
 	const SLUG_NAME = 'slug_name';
-	protected $connection = 'mysql';
 	protected $table = 'movement';
 	public $timestamps = false;
 

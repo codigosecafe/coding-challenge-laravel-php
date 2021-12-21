@@ -6,6 +6,7 @@
         * [PHP e suas extenções](#installation-php-e-suas-extenções)
     * [Via composer](#installation-composer)
     * [Via Docker](#installation-docker)
+* [Postman](#postman)
 * [Problemas?](#issue)
 ---
 ## Descrição do desafio<span id="descrição-do-desafio"></span>
@@ -76,7 +77,7 @@ Agora vamos criar o arquivo **.sqlite** nele que será armazenado nossos registr
 ```sh
 touch database/database.sqlite
 ```
-O laravel precisa de permissão de escrita em alguns dos seus diretórios, se você estiver configurando um servidor web sugiro ler a documentação, mas como o teste é local eu defini como legível, gravável e executável (777).
+O laravel precisa de permissão de escrita em alguns dos seus diretórios, se você estiver configurando um servidor web sugiro ler a documentação do laravel, mas como o teste é local eu defini como legível, gravável e executável (777).
 
 ```sh
 chmod 777 -R database/database.sqlite storage/ bootstrap/cache/
@@ -94,7 +95,6 @@ Se tudo estiver certo no terminal você verá a seguinte mensagem
 Starting Laravel development server: http://127.0.0.1:8000
 [Tue Dec 21 01:57:21 2021] PHP 7.4.27 Development Server (http://127.0.0.1:8000) started
 ```
-
 ---
 ### Instalação via Docker<span id="installation-composer"></span>
 Clone o projeto para seu ambiente de desenvolvimento
@@ -125,7 +125,7 @@ Agora precisamos instalar as dependencias do nosso projeto
 ```sh
 composer install
 ```
-O laravel precisa de permissão de escrita em alguns dos seus diretórios, se você estiver configurando um servidor web sugiro ler a documentação, mas como o teste é local eu defini como legível, gravável e executável (777).
+O laravel precisa de permissão de escrita em alguns dos seus diretórios, se você estiver configurando um servidor web sugiro ler a documentação do laravel, mas como o teste é em um ambiente controlado eu defini como legível, gravável e executável (777).
 
 ```sh
 chmod 777 -R storage/ bootstrap/cache/
@@ -134,6 +134,12 @@ Agora vamos criar a nossa estrutura de tabelas e popular com alguns dados inicia
 ```sh
 php artisan migrate --seed
 ```
+Se tudo estiver certo basta acessar o projeto com o seguinte link
+[http://localhost:8989](http://localhost:8989)
+
+---
+## Postman <span id="postman"></span>
+Adicionei uma pasta chamada **!POSTMAN**, você pode importar os arquivos e testar todos os end-points disponível para API.
 
 ---
 ## Problemas? <span id="issue"></span>

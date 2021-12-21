@@ -10,11 +10,11 @@ use Illuminate\Database\Eloquent\Collection;
 
 /**
  * Class User
- * 
+ *
  * @property int $id
  * @property string $name
  * @property string $slug_name
- * 
+ *
  * @property Collection|PersonalRecord[] $personal_records
  *
  * @package App\Entities
@@ -24,7 +24,6 @@ class User extends Entity
 	const ID = 'id';
 	const NAME = 'name';
 	const SLUG_NAME = 'slug_name';
-	protected $connection = 'mysql';
 	protected $table = 'user';
 	public $timestamps = false;
 
