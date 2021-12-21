@@ -97,7 +97,7 @@ Starting Laravel development server: http://127.0.0.1:8000
 [Tue Dec 21 01:57:21 2021] PHP 7.4.27 Development Server (http://127.0.0.1:8000) started
 ```
 ---
-### Instalação via Docker<span id="installation-composer"></span>
+### Instalação via Docker<span id="installation-docker"></span>
 Clone o projeto para seu ambiente de desenvolvimento
 ```sh
 git clone https://github.com/codigosecafe/coding-challenge-laravel-php.git
