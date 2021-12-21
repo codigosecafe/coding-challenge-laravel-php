@@ -8,6 +8,8 @@
     * [Via Docker](#installation-docker)
 * [Postman](#postman)
 * [Rodando Testes](#testes)
+* [Resposta para o desafio](#resposta)
+* [Informação bonus "fuzzy search"](#bonus)
 * [Problemas?](#issue)
 ---
 ## Descrição do desafio<span id="descrição-do-desafio"></span>
@@ -160,6 +162,98 @@ Resultado esperado dos testes
 
 <img src="./docs/image/response-test.png?raw=true"  />
 
+---
+ <span id="resposta"></span>
+## A solução para o desafio proposto
+
+```sh
+curl --location --request GET 'http://127.0.0.1:8000/api/rank-movement/BACK%20SQUAT'
+```
+Retorno
+```json
+{
+    "data": {
+        "movement": "BACK SQUAT",
+        "ranked_records": 3,
+        "rank": [
+            {
+                "name_user": "JOAO",
+                "position": 1,
+                "score": 130,
+                "date_time": "2021-01-03 03:00:00",
+                "date_time_formated": "03/01/2021 03:00:00"
+            },
+            {
+                "name_user": "JOSE",
+                "position": 1,
+                "score": 130,
+                "date_time": "2021-01-03 03:00:00",
+                "date_time_formated": "03/01/2021 03:00:00"
+            },
+            {
+                "name_user": "PAULO",
+                "position": 2,
+                "score": 125,
+                "date_time": "2021-01-03 03:00:00",
+                "date_time_formated": "03/01/2021 03:00:00"
+            }
+        ]
+    },
+    "success": true,
+    "info_app": {
+        "date_time": "2021-21-12 07:22:58",
+        "app_name": "PHP coding challenge with Laravel 8"
+    }
+}
+```
+---
+
+ <span id="bonus"></span>
+## Informação Bonus
+Para listagem geral de qualquer endpoit "index" usei a técnia de "fuzzy search" basta adicionar como parametro **"searchTerm"** qualquer valor que ele retornará um resultado por aproximação exemplo: **DFT => DEADLIFT** vamos ver isso em execução
+
+```sh
+curl --location --request GET 'http://127.0.0.1:8000/api/rank-movement?searchTerm=DFT'
+```
+Retorno
+```json
+{
+    "data": [
+        {
+            "movement": "DEADLIFT",
+            "ranked_records": 3,
+            "rank": [
+                {
+                    "name_user": "PAULO",
+                    "position": 1,
+                    "score": 250.3,
+                    "date_time": "2021-12-21 00:52:44",
+                    "date_time_formated": "21/12/2021 00:52:44"
+                },
+                {
+                    "name_user": "JOSE",
+                    "position": 2,
+                    "score": 190,
+                    "date_time": "2021-01-06 03:00:00",
+                    "date_time_formated": "06/01/2021 03:00:00"
+                },
+                {
+                    "name_user": "JOAO",
+                    "position": 3,
+                    "score": 180,
+                    "date_time": "2021-01-02 03:00:00",
+                    "date_time_formated": "02/01/2021 03:00:00"
+                }
+            ]
+        }
+    ],
+    "success": true,
+    "info_app": {
+        "date_time": "2021-21-12 07:28:52",
+        "app_name": "PHP coding challenge with Laravel 8"
+    }
+}
+```
 ---
 ## Problemas? <span id="issue"></span>
 
