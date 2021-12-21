@@ -156,6 +156,10 @@ Agora é cruzar os dedos e rodar os testes, importante passar a frag **--env=tes
 ```sh
 php artisan test --env=testing
 ```
+Resultado esperado dos testes
+
+<img src="./docs/image/response-test.png?raw=true"  />
+
 ---
 ## Problemas? <span id="issue"></span>
 

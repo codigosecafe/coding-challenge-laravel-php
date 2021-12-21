@@ -28,4 +28,4 @@ Fornecer as seguintes informações aumentará as chances de sua issue ser resol
 ## Exoneração de responsabilidade de solicitações de pull
 Não aceitaremos solicitações pull request, portanto, as alterações precisarão ser feitas por nós. Dito isso, ainda estamos totalmente encorajando você a enviar um problema, pois isso nos ajudará a manter nosso projeto atualizado.
 
-[link-problema]:https://github.com/codigosecafe/teste-sistema-enderecos-vue-laravel/issues/new
+[link-problema]:https://github.com/codigosecafe/coding-challenge-laravel-php/issues/new
