@@ -40,12 +40,12 @@ class MovementService extends Service
         return $dataMovement;
    }
 
-   /**
-    * Metodo responsavel por cadastrar um novo endereço desde que ele não exista em nossa base
-    *
-    * @param Collection $request
-    * @return void
-    */
+  /**
+   * Store function
+   *
+   * @param Collection $request
+   * @return void
+   */
    public function store(Collection $request){
         $this->validateWithArray($request->toArray(), MovementValidators::store(), MovementValidators::messages() );
         $data4Create = $this->entity->fieldsForCreator($request);
@@ -53,12 +53,13 @@ class MovementService extends Service
         return $this->entity->create($data4Create);
    }
 
-   /**
-    * Metodo responsavel por atualizar um novo endereço desde que ele exista em nossa base
-    *
-    * @param [type] $movement
-    * @return void
-    */
+  /**
+   * Update function
+   *
+   * @param [type] $request
+   * @param [type] $movementID
+   * @return void
+   */
    public function update($request,  $movementID){
 
         $this->validateWithArray([$this->entity::ID => $movementID], MovementValidators::updateOrDestroy(), MovementValidators::messages() );
@@ -69,12 +70,12 @@ class MovementService extends Service
    }
 
 
-   /**
-    * Metodo responsavel por deletar um endereço de nossa base
-    *
-    * @param [type] $movement
-    * @return void
-    */
+ /**
+  * Destroy function
+  *
+  * @param [type] $movementID
+  * @return void
+  */
    public function destroy($movementID){
         $this->validateWithArray([$this->entity::ID => $movementID], MovementValidators::updateOrDestroy(), MovementValidators::messages() );
         $deleteData = $this->entity->where($this->entity::ID, $movementID)->first();
