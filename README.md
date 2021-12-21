@@ -7,6 +7,7 @@
     * [Via composer](#installation-composer)
     * [Via Docker](#installation-docker)
 * [Postman](#postman)
+* [Rodando Testes](#testes)
 * [Problemas?](#issue)
 ---
 ## Descrição do desafio<span id="descrição-do-desafio"></span>
@@ -141,6 +142,20 @@ Se tudo estiver certo basta acessar o projeto com o seguinte link
 ## Postman <span id="postman"></span>
 Adicionei uma pasta chamada **!POSTMAN**, você pode importar os arquivos e testar todos os end-points disponível para API.
 
+---
+## Rodando Testes <span id="testes"></span>
+Para garantir o funcionamento da nossa aplicação o desenvolvimento dela foi baseada em testes, o meu objetivo foi testes de **FEATURES** e nela eu testei todos os endpoints criados na aplicação.
+
+<img src="./docs/image/route-list.png?raw=true"  />
+
+Para garantir o funcionamento dos testes vamos dar as permições de leitura, escrita e execução (777), em nosso arquivo **sqlite** que usaremos para a armazenar os dados de teste.
+```sh
+chmod 777 -R database/databasetest.sqlite
+```
+Agora é cruzar os dedos e rodar os testes, importante passar a frag **--env=testing** para garantir que vamos usar o banco de dados de teste
+```sh
+php artisan test --env=testing
+```
 ---
 ## Problemas? <span id="issue"></span>
 
