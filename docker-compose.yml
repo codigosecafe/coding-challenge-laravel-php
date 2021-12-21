@@ -1,0 +1,75 @@
+version: "3.7"
+services:
+    # image project
+    coding_challenge_laravel_php:
+        build:
+            args:
+                user: claudio
+                uid: 1000
+            context: ./
+            dockerfile: Dockerfile
+        image: laravel-app
+        restart: unless-stopped
+        working_dir: /var/www/
+        volumes:
+            - ./:/var/www
+        depends_on:
+            - redis
+            - queue
+        networks:
+            - coding_challenge_laravel_php
+
+    # nginx
+    nginx:
+        image: nginx:alpine
+        restart: unless-stopped
+        ports:
+            - 8989:80
+        volumes:
+            - ./:/var/www
+            - ./docker/nginx/:/etc/nginx/conf.d/
+        networks:
+            - coding_challenge_laravel_php
+
+    # db mysql
+    mysql:
+        image: mysql:5.7.22
+        restart: unless-stopped
+        environment:
+            MYSQL_DATABASE: ${DB_DATABASE}
+            MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+            MYSQL_PASSWORD: ${DB_PASSWORD}
+            MYSQL_USER: ${DB_USERNAME}
+        volumes:
+            - ./.docker/mysql/dbdata:/var/lib/mysql
+        ports:
+            - 3388:3306
+        networks:
+            - coding_challenge_laravel_php
+
+    # queue
+    queue:
+        build:
+            args:
+                user: claudio
+                uid: 1000
+            context: ./
+            dockerfile: Dockerfile
+        restart: unless-stopped
+        command: "php artisan queue:work"
+        volumes:
+            - ./:/var/www
+        depends_on:
+            - redis
+        networks:
+            - coding_challenge_laravel_php
+
+    # redis
+    redis:
+        image: redis:latest
+        networks:
+            - coding_challenge_laravel_php
+
+networks:
+    coding_challenge_laravel_php:
+        driver: bridge

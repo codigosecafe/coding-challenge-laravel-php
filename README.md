@@ -9,7 +9,7 @@ Olá esse projeto tem a intenção de mostrar a minha capacidade em trazer uma s
 
 Recebi como desafio o seguite cenário:
 
-Construir um endpoint REST (de preferência em PHP) que retorne o ranking de um determinado movimento, trazendo o nome do movimento e uma lista ordenada com os usuários, seu espectivo recorde pessoal (maior valor), posição e data.
+Construir um endpoint REST (de preferência em PHP) que retorne o ranking de um determinado Movemento, trazendo o nome do Movemento e uma lista ordenada com os usuários, seu espectivo recorde pessoal (maior valor), posição e data.
 
 Considerações:
  - Usuários com o mesmo valor de recorde pessoal devem ocupar a mesma posição no ranking.
