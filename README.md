@@ -212,7 +212,7 @@ Retorno
 
  <span id="bonus"></span>
 ## Informação Bonus
-Para listagem geral de qualquer endpoit "index" usei a técnia de "fuzzy search" basta adicionar como parametro **"searchTerm"** qualquer valor que ele retornará um resultado por aproximação exemplo: **DFT => DEADLIFT** vamos ver isso em execução
+Para listagem geral de qualquer endpoit "index" usei a técnia de "fuzzy search", ao adicionar o parametro **"searchTerm"** e nele informar qualquer valor que a nossa aplicação retornará um resultado por aproximação exemplo: **DFT => DEADLIFT** vamos ver isso em execução
 
 ```sh
 curl --location --request GET 'http://127.0.0.1:8000/api/rank-movement?searchTerm=DFT'
